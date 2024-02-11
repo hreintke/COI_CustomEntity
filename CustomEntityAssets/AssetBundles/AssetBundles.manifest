@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 1924072767
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: geowallprefab_f360
+      Dependencies: {}
+    Info_1:
+      Name: planecolumn_d6e1
+      Dependencies: {}

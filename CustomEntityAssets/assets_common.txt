@@ -1,0 +1,6 @@
+geowallprefab_f360
+    Assets/Prefabs/geowallprefab.prefab
+
+planecolumn_d6e1
+    Assets/Prefabs/PlaneColumn.prefab
+
