@@ -15,6 +15,7 @@ using Mafi.Unity.InputControl;
 using Mafi.Core.Products;
 using Mafi.Core.Syncers;
 using Mafi.Base.Prototypes.Machines.ComputingEntities;
+using Mafi.Unity;
 
 namespace CustomEntityMod
 {
@@ -35,6 +36,7 @@ namespace CustomEntityMod
 
         protected override void AddCustomItems(StackContainer itemContainer)
         {
+            UpdaterBuilder updaterBuilder = UpdaterBuilder.Start();
             base.AddCustomItems(itemContainer);
             AddSectionTitle(itemContainer, "These are the actions");
             CustomEntityButton = AddButton(itemContainer, () => { Entity.buttonAction(); }, "Action Button");
@@ -44,12 +46,33 @@ namespace CustomEntityMod
                 .SetTextStyle(Builder.Style.Global.TextControls)
                 .SetText("Default text");
             sliderLabel.AppendTo(itemContainer);
- //           CustomEntityButton.OnClick(() => {  Entity.buttonAction(); 
- //                                            });
+
             StatusPanel statusInfo = AddStatusInfoPanel();
-            statusInfo.SetStatusWorking();
+            updaterBuilder.Observe<CustomEntity.State>((Func<CustomEntity.State>)(() => this.Entity.CurrentState)).Do((Action<CustomEntity.State>)(state =>
+            {
+                switch (state)
+                {
+                    case CustomEntity.State.None:
+                        statusInfo.SetStatus(Tr.EntityStatus__Idle, StatusPanel.State.Warning);
+                        break;
+                    case CustomEntity.State.Working:
+                        statusInfo.SetStatusWorking();
+                        break;
+                    case CustomEntity.State.Paused:
+                        statusInfo.SetStatusPaused();
+                        break;
+//                    case Mainframe .State.Broken:
+//                        statusInfo.SetStatus(Tr.EntityStatus__Broken, StatusPanel.State.Critical);
+//                        break;
+                    case CustomEntity.State.NotEnoughWorkers:
+                        statusInfo.SetStatusNoWorkers();
+                        break;
+ //                   case Mainframe.State.NotEnoughElectricity:
+ //                       statusInfo.SetStatus(Tr.EntityStatus__LowPower, StatusPanel.State.Critical);
+ //                       break;
+                }
+            }));
             //  m_filterView = new ProtosFilterEditor<ProductProto>(this.Builder, (IWindowWithInnerWindowsSupport) this, this.ItemsContainer, new Action<ProductProto>((p) => { }), new Action<ProductProto>((p) => { }),null,null, usePrimaryBtnStyle: false);
-            UpdaterBuilder updaterBuilder = UpdaterBuilder.Start();
             updaterBuilder.Observe<int>((Func<int>)(() => this.Entity.pushCount)).Do((Action<int>)(pc => { sliderLabel.SetText(Entity.getLabelTxt()); }));
             this.AddUpdater(updaterBuilder.Build());
 

@@ -40,6 +40,7 @@ namespace CustomEntityMod
             registrator.RegisterAllProducts();
             registrator.RegisterData<CustomEntityRegistrator>();
             registrator.RegisterData<EntityResearch>();
+            registrator.RegisterData<CustomMachineRegistrator>();
         }
     }
 }

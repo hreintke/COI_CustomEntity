@@ -75,6 +75,8 @@
     <Compile Include="EntityResearch.cs" />
     <Compile Include="EntityView.cs" />
     <Compile Include="Logging.cs" />
+    <Compile Include="MachinePrototype.cs" />
+    <Compile Include="MachineRegistrator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

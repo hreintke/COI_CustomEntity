@@ -27,9 +27,9 @@ namespace CustomEntityMod
             EntityLayout el = registrator.LayoutParser.ParseLayoutOrThrow("[8]");
 
             //          EnitityCosts sc = EntityCosts.None;
-            //          Actual EntityCosts in the game are scaled due to DifficulySetting.
+            //          Actual EntityCosts in the game are scaled based on DifficulySetting.
 
-            EntityCostsTpl ecTpl = new EntityCostsTpl.Builder().CP(100).Glass(20).Workers(10).Priority(4);
+            EntityCostsTpl ecTpl = new EntityCostsTpl.Builder().CP(100).Glass(20).Workers(200).Priority(7);
             EntityCosts ec = ecTpl.MapToEntityCosts(registrator);
 
             LayoutEntityProto.Gfx lg =

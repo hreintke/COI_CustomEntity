@@ -25,7 +25,7 @@ namespace CustomEntityMod
 {
 
     [GenerateSerializer(false, null, 0)]
-    public class CustomEntity : LayoutEntity, IEntityWithWorkers
+    public class CustomEntity : LayoutEntity, IEntityWithWorkers, IEntityWithSimUpdate
     {
         private CustomEntityPrototype _proto;
 
@@ -36,6 +36,27 @@ namespace CustomEntityMod
             Paused,
             NotEnoughWorkers,
         }
+
+        public State CurrentState { get; private set; }
+
+        void IEntityWithSimUpdate.SimUpdate()
+        {
+            CurrentState = updateState();
+        }
+
+        private State updateState()
+        {
+            if (!base.IsEnabled)
+            {
+                return State.Paused;
+            }
+            if (Entity.IsMissingWorkers(this))
+            {
+                return State.NotEnoughWorkers;
+            }
+            return State.Working;
+        }
+
         private int _pushCount = 0;
         public int pushCount
         { 
@@ -69,7 +90,7 @@ namespace CustomEntityMod
 
         public string getLabelTxt()
         {
-            return $"The button has been pushed {_pushCount} times ";
+            return $"The button has been pushed {_pushCount} times, simUpdateCount" ; 
         }
 
         public void buttonAction()

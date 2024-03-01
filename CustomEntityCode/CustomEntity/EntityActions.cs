@@ -27,6 +27,8 @@ namespace CustomEntityMod
             // This unlocks the custom entity at startup
             // Next verions will show the use of research
             unlockedProtosDb.Unlock(ImmutableArray.Create(protosDb.Get(PrototypeIDs.LocalEntities.CustomEntityID).Value));
+            unlockedProtosDb.Unlock(ImmutableArray.Create(protosDb.Get(PrototypeIDs.Machine.CustomMachineID).Value));
+            unlockedProtosDb.Unlock(ImmutableArray.Create(protosDb.Get(PrototypeIDs.Recipes.CustomMachineGoldOil).Value));
         }
     }
 }

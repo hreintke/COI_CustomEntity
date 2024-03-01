@@ -14,12 +14,10 @@ namespace CustomEntityMod
     [GlobalDependency(RegistrationMode.AsEverything)]
     public class CustomEntityInspector : EntityInspector<CustomEntity, CustomEntityWindowView>
     {
-        private UiBuilder _uiBuilder;
         private CustomEntityWindowView _windowView;
 
-        public CustomEntityInspector(InspectorContext inspectorContext, UiBuilder uiBuilder) : base(inspectorContext)
+        public CustomEntityInspector(InspectorContext inspectorContext) : base(inspectorContext)
         {
-            _uiBuilder = uiBuilder;
             _windowView = new CustomEntityWindowView(this);
         }
         protected override CustomEntityWindowView GetView() => this._windowView;

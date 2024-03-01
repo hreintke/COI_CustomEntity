@@ -18,6 +18,7 @@ using Mafi;
 using Mafi.Unity;
 
 // This code is from a decompiled version of Mafi.Unity.InputControl.Inspectors.EntityInspector`2
+// Included here because the original in an internal class
 
 namespace CustomEntityMod
 {
