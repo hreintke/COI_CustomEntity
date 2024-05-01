@@ -20,6 +20,8 @@ namespace CustomEntityMod
         public static Version ModVersion = new Version(0, 0, 3);
         public bool IsUiOnly => false;
 
+        public Option<IConfig> ModConfig { get; }
+
         public void ChangeConfigs(Lyst<IConfig> configs)
         {
         }
@@ -41,6 +43,11 @@ namespace CustomEntityMod
             registrator.RegisterData<CustomEntityRegistrator>();
             registrator.RegisterData<EntityResearch>();
             registrator.RegisterData<CustomMachineRegistrator>();
+        }
+
+        public void EarlyInit(DependencyResolver resolver)
+        {
+            LogWrite.Info("EarlyInit");
         }
     }
 }

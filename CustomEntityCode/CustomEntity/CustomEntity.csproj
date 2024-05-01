@@ -34,19 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mafi">
-      <HintPath>..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.dll</HintPath>
     </Reference>
     <Reference Include="Mafi.Base">
-      <HintPath>..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Base.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Base.dll</HintPath>
     </Reference>
     <Reference Include="Mafi.Core">
-      <HintPath>..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Core.dll</HintPath>
     </Reference>
     <Reference Include="Mafi.ModsAuthoringSupport">
-      <HintPath>..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.ModsAuthoringSupport.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.ModsAuthoringSupport.dll</HintPath>
     </Reference>
     <Reference Include="Mafi.Unity">
-      <HintPath>..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Unity.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\Mafi.Unity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,13 +56,15 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\..\..\Utilities\Steam\steamapps\common\Captain of Industry\Captain of Industry_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomEntityMod.cs" />
