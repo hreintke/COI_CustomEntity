@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4234397071
+CRC: 3407133131
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 277608a6575636970441955ebb1536a5
+    Hash: 47a0a36504e068bc0763b87baf581d76
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0f9fba26cbb38215f317d1fd6b1954a0
+    Hash: c85f96e817de46eb911c321c9fd22d58
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,13 +17,23 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 23
   Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
 - Class: 33
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Prefabs/geowallprefab.prefab
+- Assets/ExampleMod/BlastFurnace.prefab
 Dependencies: []

@@ -1,6 +1,3 @@
-geowallprefab_f360
-    Assets/Prefabs/geowallprefab.prefab
-
-planecolumn_d6e1
-    Assets/Prefabs/PlaneColumn.prefab
+blastfurnace_d374
+    Assets/ExampleMod/BlastFurnace.prefab
 

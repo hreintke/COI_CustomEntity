@@ -26,15 +26,11 @@ namespace CustomEntityMod
             Proto.Str ps = Proto.CreateStr(PrototypeIDs.LocalEntities.CustomEntityID, "CustomEntity", "CustomEntity description");
             EntityLayout el = registrator.LayoutParser.ParseLayoutOrThrow("[8]");
 
-            //          EnitityCosts sc = EntityCosts.None;
-            //          Actual EntityCosts in the game are scaled based on DifficulySetting.
-
             EntityCostsTpl ecTpl = new EntityCostsTpl.Builder().CP(100).Glass(20).Workers(200).Priority(7);
             EntityCosts ec = ecTpl.MapToEntityCosts(registrator);
 
             LayoutEntityProto.Gfx lg =
-  //              new LayoutEntityProto.Gfx("Assets/Base/Machines/Waste/Flare.prefab",
-                new LayoutEntityProto.Gfx("Assets/Prefabs/PlaneColumn.prefab",
+                new LayoutEntityProto.Gfx("Assets/Base/Machines/Waste/Flare.prefab",
 
                 customIconPath: "Assets/Unity/Generated/Icons/LayoutEntity/Flare.png",
                 categories: new ImmutableArray<ToolbarCategoryProto>?(registrator.GetCategoriesProtos(Ids.ToolbarCategories.Landmarks)))

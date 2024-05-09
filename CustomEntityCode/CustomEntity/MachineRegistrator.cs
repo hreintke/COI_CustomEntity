@@ -47,7 +47,7 @@ namespace CustomEntityMod
             ImmutableArray<AnimationParams> emptyAnimantion = ImmutableArray<AnimationParams>.Empty;
 
 
-            MachineProto.Gfx lg = new MachineProto.Gfx("Assets/Prefabs/PlaneColumn.prefab",
+            MachineProto.Gfx lg = new MachineProto.Gfx("Assets/ExampleMod/BlastFurnace.prefab",
                 registrator.GetCategoriesProtos(new Proto.ID[] { Ids.ToolbarCategories.Landmarks }));
 
             MachineProto bp =
